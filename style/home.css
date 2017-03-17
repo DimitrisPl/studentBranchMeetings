@@ -1,0 +1,15 @@
+.panel-group {
+	text-align: center;
+}
+
+.panel {
+	width: 250px;
+	text-align: center;
+	display: inline-block;
+	margin: 10px;
+}
+
+.img-rounded {
+	width: 170;
+	height: 170px;
+}

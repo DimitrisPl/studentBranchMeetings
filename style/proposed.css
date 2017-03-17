@@ -1,0 +1,17 @@
+.panel {
+	vertical-align: middle;
+}
+
+.panel-controls {
+	text-align: center;
+}
+
+.panel-controls button {
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+.icon {
+	width: 150px;
+	height: 150px;
+}

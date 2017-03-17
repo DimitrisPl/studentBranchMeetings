@@ -1,0 +1,32 @@
+.speaker-img {
+	display: inline-block;
+	width: 250px;
+	height: 250px;
+}
+
+.list-group {
+	display: inline-block;
+	margin-left: 2%;
+	vertical-align: bottom;
+}
+
+.approve {
+	width:40px;
+	height: 40px;
+	margin: 2px;
+	cursor: pointer;
+}
+
+#approveFALSE {
+	margin-top: 32px;
+}
+
+.descriptive-info {
+	margin-top: 10px;
+	
+}
+
+.extra-links {
+	display: block;
+	text-align: left;
+}

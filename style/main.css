@@ -1,0 +1,21 @@
+body {
+	overflow-x: hidden;
+}
+
+.input-group {
+	width: 300px;
+	left: 40%;
+	
+}
+
+.footer {
+	margin-top: 50px;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.panel {
+	border-bottom: 1px solid lightgray;
+	padding: 10px;
+}

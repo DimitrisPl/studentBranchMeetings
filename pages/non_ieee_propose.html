@@ -1,0 +1,104 @@
+<!Doctype html>
+<html>
+	<!-- This is a test front end file. Will be have a php extension. -->
+	<!-- approval image from https://pixabay.com/p-148087/?no_redirect labeled as free for commersial use -->
+	<head>
+		<meta charset="utf-8">
+		<title> ATEITH IEE student branch - programTool</title>
+		<!-- bootstrap inputs -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!-- native inputs -->
+		<link rel="icon" type="image/png" href="./../img/favicon.png">
+		<link rel="stylesheet" type="text/css"  href="./../style/main.css" />
+		<link rel="stylesheet" type="text/css"  href="./../style/non_ieee_propose.css" />
+	</head>
+	<body>
+		
+		<!-- Navigation bar -->
+		<div class="row">
+			<div class="col-md-12">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="./../index.html">IEEE meeting program tool</a>
+				</div>
+				<ul class="nav navbar-nav">
+				  <li><a href="./../index.html">Home</a></li>
+				  <li class="active"><a href="#">Propose</a></li>
+				  <li><a href="./proposed.html">Proposed</a></li>
+				</form>
+				</ul>
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search">
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit">
+								<i class="glyphicon glyphicon-search"></i>
+					  </button>
+					</div>
+				</div>
+			  </div>
+			</nav>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3"> </div> <!-- an one column sized empty space -->
+			<div class="col-md-3">
+<!--				<div class="panel-group"> -->
+					
+					<div class="img-propose">
+						<img src="./../img/favicon.png" />
+						<input type="file" id="proposeImg" />
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<h2> Propose a person </h2>
+						<form id="proposeForm">
+							<div class="row form-row">
+								<div class="col-md-4"> <label for="name" /> Name: </label> </div>
+								<div class="col-md-8"> <input type="text" id="name" /> </div>
+							</div>
+							<div class="row form-row">
+								<div class="col-md-4"> <label for="contact"> Contanct info: </label> </div>
+								<div class="col-md-8"> <textarea id="contact"> </textarea> </div>
+							</div>
+							<div class="row form-row">
+								<div class="col-md-4"> <label for="description"> Description: </label> </div>
+								<div class="col-md-8"> <textarea id="description"> </textarea> </div>
+							</div>
+							<div class="row form-row">
+								<div class="col-md-4"> <label for="links"> External links </label> </div>
+								<div class="col-md-8"> <textarea id="links"> </textarea> </div>
+							</div>
+							<div class="row form-row">
+								<br/>
+								<div class="col-md-8"> <input class="btn-primary" type="submit" id="submit" value="Propose!" /> </div>								
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2"> </div> <!-- an one column sized empty space -->
+		
+		<!-- footer -->
+		
+		<div class="row">
+			<div class="col-md-12">
+				<div class="navbar-default-bottom navbar-default footer">
+					<br/><br/>
+					<p> All rights reserved. </p>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
