@@ -1,0 +1,119 @@
+--This is the database structure.
+
+-- Tables:
+--	proposals: The main page proposals.
+--	proposed : The queue with the proposed persons.
+
+-- proposals:
+--	Every row is a person.
+--
+--	id  : int | an increasing integer.
+--  publicId : int | an identifier will be used to associate the person with it's database entry. can be viewed publicly at the url and html code.
+--	Name: varchar
+--	description: text
+--	extrernal links: text | formated array. Must be interpreted before posted.
+--	active: boolean | on->vote is on, off->vote is off
+--	positive_votes : int | votes up
+--	negeativVotes : int | votes down
+--	icon: varchar | path to the image.
+--	creation date: timestamp.
+	
+--proposed:
+--	Every row is a person.
+--	id  : int | an increasing integer.
+--	Name: varchar
+--	description: text
+--	contact info: text | formated array. Must be interpreted before posted.
+--	extrernal links: text | formated array. Must be interpreted before posted.
+--	active: boolean | on->has to be approved or declined, off->already decided.
+--	icon: varchar | path to the image.
+--	creation date: timestamp.
+	
+	
+--Code: for mysql
+
+-- if forgot a user password:
+-- SET PASSWORD FOR 'user'@'localhost' = PASSWORD('new_password');
+
+
+-- create database IEEEMeetingTool;
+
+
+-- proposals:	
+create table proposals (
+	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	publicId INT(6) NOT NULL,
+	name VARCHAR(30) NOT NULL,
+	external_links TEXT NOT NULL,
+	active TINYINT(1) NOT NULL,
+	positive_votes INT(3) NOT NULL,
+	negative_votes INT(3) NOT NULL,
+	icon VARCHAR(100) NOT NULL,
+	created TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL
+);
+
+ALTER TABLE proposals ADD CONSTRAINT UniquePublicId UNIQUE (publicId);
+
+
+-- proposed:
+
+create table proposed (
+	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(30) NOT NULL,
+	contact_info TEXT NOT NULL,
+	external_links TEXT NOT NULL,
+	active TINYINT(1) NOT NULL,
+	icon VARCHAR(100) NOT NULL,
+	created TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL
+); 
+
+
+	
+	
+-- Create test inserts.
+
+-- for proposals.
+
+insert into proposals (publicId, name, external_links, active, positive_votes, negative_votes, icon)
+values (10, "Name1 Last1", "linklinklinklinklinklink", 1, 3, 1, "img1.png");
+
+insert into proposals (publicId, name, external_links, active, positive_votes, negative_votes, icon)
+values (11, "Name2 Last2", "linklinklinklinklinklink", 0, 0, 1, "img1.png");
+
+insert into proposals (publicId, name, external_links, active, positive_votes, negative_votes, icon)
+values (12, "Name3 Last3", "linklinklinklinklinklink", 1, 5, 2, "img2.png");
+
+insert into proposals (publicId, name, external_links, active, positive_votes, negative_votes, icon)
+values (13, "Name4 Last4", "linklinklinklinklinklink", 1, 6, 4, "img1.png");
+
+insert into proposals (publicId, name, external_links, active, positive_votes, negative_votes, icon)
+values (14, "Name5 Last5", "linklinklinklinklinklink", 0, 0, 10, "img2.png");
+
+insert into proposals (publicId, name, external_links, active, positive_votes, negative_votes, icon)
+values (15, "Name6 Last6", "linklinklinklinklinklink", 1, 9, 0, "img3.jpg");
+	
+
+-- for proposed
+
+insert into proposed (name, contact_info, external_links, active, icon)
+values ("Name7 Last7", "my info info info info", "linklinklinklinklinklink", 1, "./img/img1.png");	
+
+insert into proposed (name, contact_info, external_links, active, icon)
+values ("Name8 Last8", "my info info info info", "linklinklinklinklinklink", 1, "./img/img2.png");	
+
+insert into proposed (name, contact_info, external_links, active, icon)
+values ("Name9 Last9", "my info info info info", "linklinklinklinklinklink", 0, "./img/img1.png");	
+
+insert into proposed (name, contact_info, external_links, active, icon)
+values ("Name10 Last10", "my info info info info", "linklinklinklinklinklink", 1, "./img/img3.jpg");	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
