@@ -1,0 +1,28 @@
+.img-propose {
+	display: inline-block;
+	text-align: center;
+}
+
+.img-propose img {
+	width: 200px;
+	height: 200px;
+}
+
+.form-group  {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.form-row div, .form-row textarea, .form-row input{
+	width: 100%;
+}
+
+textarea {
+	resize: none;
+}
+
+.btn-primary {
+	margin-top: 10px;
+	height: 40px;
+	margin-bottom: 130px;
+}
