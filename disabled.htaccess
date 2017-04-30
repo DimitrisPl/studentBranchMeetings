@@ -1,7 +1,0 @@
-rewriteengine on
-
-rewritecond %{REQUEST_URI} /$
-rewriterule (.+) $1voting.php [L]
-
-rewritecond %{REQUEST_URI} !\.[^/]+$
-rewriterule (.+) $1.php [L]
