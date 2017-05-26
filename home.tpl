@@ -32,7 +32,7 @@
 		</div>
 		
 		<!-- main body --> <?php
-		if($result->num_rows == 0)
+		if($result['num_rows'] == 0)
 		{ ?>
 			<div class="row">
 				<div class="col-md-2"> </div> <!-- this is a two columns empty space -->

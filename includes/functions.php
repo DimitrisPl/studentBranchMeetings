@@ -1,7 +1,4 @@
 <?php
-	require 'db_functions.php';
-	include 'paths.php';
-	
 	/* INFO:
 	* This might come in handy... For example for scarying hackers? :P ... won't work though xD
 	*/
