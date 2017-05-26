@@ -1,14 +1,13 @@
 <?php
-	global $servername, $username, $password;
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbName = "IEEEMeetingTool";
+	define('HOST', 'localhost');
+	define('USER', 'root');
+	define('PASSWORD', '');
+	define('DATABASE', 'ieee_meeting_tool');
+	
 	/*
-	global $servername, $username, $password;
-	$servername = "localhost";
-	$username = "IEEEMember";
-	$password = "notSimple";
-	$dbName = "IEEEMeetingTool";
+	define('HOST', 'localhost');
+	define('USER', 'IEEEMember');
+	define('PASSWORD', 'notSimple');
+	define('DATABASE', 'IEEEMeetingTool');
 	*/
 ?>
