@@ -1,14 +1,21 @@
 <?php
-	require "includes/filenames.php";
-	require "includes/db_functions.php";
-	include 'includes/functions.php';
+	require "includes/filenames_and_paths.php";
+	require DATABASE_FUNCTIONS_FILE;
+	include FUNCTIONS_FILE;
 	
-	connect(); // connects a test database.
+	connect();
 	
-	$sql = "SELECT * from proposals"; //WHERE active > 0
-	$result = $conn->query($sql);		
+	global $speakers;
+	$speakers = array();
+	$speakersDb = $conn->query(
+		"SELECT * FROM approved_speaker aps ".
+		"INNER JOIN human h ON h.id = aps.human_id "
+	);
 	
-	require "home.tpl";
+	while($speaker = $speakersDb->fetch_array())
+		$speakers[] = $speaker;
+	
+	require template(HOME);
 	
 	disconnect();
 ?>

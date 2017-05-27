@@ -1,14 +1,14 @@
+<?php
+	require '../includes/filenames_and_paths.php';
+	require FUNCTIONS_FILE; // basic functions header, footer and database connection.
+?>
+
 <!Doctype html>
 <html>
-	<?php
-	
-		// include files with necessary functions.
-		include './../includes/functions.php'; // basic functions header, footer and database connection.
-		include './../includes/prints_for_index.php'; // prints for this page only.
-			
-		openPage("propose"); // includes bootstrap, css files and prints navigation bar.
-	?>
-			
+	<head>
+		<?php require HEADER_FILE;?>
+	</head>
+	<body>
 		<div class="row">
 			<div class="col-md-3"> </div> <!-- an one column sized empty space -->
 			<div class="col-md-3">
@@ -52,9 +52,6 @@
 		
 		
 		
-	<?	
-		// print footer.
-		printFooter();
-			
-	?>
+	<? require FOOTER_FILE; ?>
+	</body>
 </html>	
